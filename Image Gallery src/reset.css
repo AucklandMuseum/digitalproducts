@@ -1,0 +1,26 @@
+/* Reset global typography rules */
+html,
+body {
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'GothamNarrow';
+  font-weight: 400;
+  line-height: 1.43;
+  overflow-x: hidden;
+}
+
+.openseadragon-container:focus,
+.openseadragon-canvas:focus {
+  outline: none;
+}

@@ -1,0 +1,33 @@
+specifically a material ui theme- here’s the code and here’s a like to material ui docs  for themes https://material-ui.com/customization/theming/
+
+const landingButton = createMuiTheme({
+    props: {
+        MuiButtonBase: {
+          disableRipple: true
+        }
+      },
+      overrides: {
+        MuiButton: {
+          root: {
+            fontSize: '2vh',
+            fontWeight: 500,
+            borderRadius: '5vw',
+            textTransform: 'none',
+            backdropFilter: 'blur(0.2vw)',
+            border: '2px solid white',
+            fontFamily: "'Gotham SSm A', 'Gotham SSm B', Helvetica, sans-serif",
+            color: 'white',
+            minWidth: '10vw',
+            minHeight: '6vh',
+        },
+        MuiIconButton: {
+          root: {
+            padding: 0,
+            '&:hover': {
+              backgroundColor: '#cacaca',
+            }
+          }
+        }
+      }
+    }
+  });

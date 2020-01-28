@@ -1,5 +1,5 @@
-# digitalproducts
-Source files of our digital products. 
+# Digital Products
+Please see the folders above for source files and SVGs of our digital products. 
 
 
 # Video Player

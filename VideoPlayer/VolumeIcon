@@ -1,0 +1,6 @@
+bootstap volume glyphicon: 
+
+.glyphicon-volume-up:before {
+  content: "\e038";
+}
+

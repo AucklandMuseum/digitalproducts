@@ -1,3 +1,258 @@
+/* Reset global typography rules */
+html,
+body {
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Gotham Narrow';
+  font-weight: 900;
+  src: url("https://www.aucklandmuseum.com/Client/CSS/AucklandMuseum/fonts/gotham-narrow-ssm-700.woff") format("woff");
+}
+
+
+body {
+  margin: 0;   	
+  font-family: 'Gotham Narrow';
+  font-weight: 400;
+  line-height: 1.43;
+}
+
+
+
+/* animations */
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInVideo {
+	0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+	100% {
+    opacity: 1;
+	}
+}
+
+.fade-in-video {
+	opacity: 1;
+	animation-name: fadeInVideo;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadeOut {
+	0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+	100% {
+    opacity: 0;
+	}
+}
+
+.fade-out {
+	opacity: 1;
+	animation-name: overlayFadeOut;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+  animation-duration: 3s;
+}
+
+@keyframes hide {
+  0%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+   
+  }
+  100% {
+      overflow:hidden;
+      opacity: 0; 
+  }
+}
+
+.hide {
+  animation: hide 1s ease 2.5s forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+      overflow:hidden;
+      opacity: 1;
+  }
+}
+
+.show {
+  animation: show 1s ease 4s forwards;
+  animation-fill-mode: forwards;
+}
+
+/* specific positioning seperate from mui styles */
+
+.masthead {
+  height: 63vh; 
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -50;
+  width: 100vw;
+}
+
+.landing-image {
+  z-index: -100;
+  position: absolute;
+  width: 1080px;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.button-container {
+  width: 100vw;
+  position: fixed;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  height: 8vh;
+  bottom: 0;
+}
+
+.video-title-overlay {
+width: 100%;
+height: 13vh;
+z-index: 10;
+bottom: 7vh;
+position: fixed;
+}
+
+.back-button-overlay {
+  width: 100%;
+  height: 6em;
+  z-index: 10;
+  left: -31px;
+  bottom: 380px;
+  width: 155px;
+  height: 78px;
+  border-radius: 50px;
+  position: fixed;
+  cursor: pointer;
+  background-color: #0000005e;
+}
+
+.home-container {
+  width: 1080px;
+  margin: auto;
+}
+
+.home-button {
+  top: 69vh;
+  right: -5vw;
+  float: right;
+  position: absolute;
+  z-index: 100;
+}
+
+.play-button-overlay {
+  width: 57px;
+  height: 57px;
+  z-index: 100;
+  position: absolute;
+  margin-top: 270px;
+  margin-left: 155px;
+}
+
+.thumbnail {
+  height: 554px; 
+  width: 356px;
+}
+
+/* video player */
+
+.video-player {
+  width: 100%;
+  height: 100vh;
+}
+
+.video-title-overlay {
+  width: 100%;
+  height: 13vh;
+  z-index: 10;
+  bottom: 6vh;
+  position: fixed;
+}
+
+.video-js .vjs-control-bar {
+  height: 11em !important;
+}
+
+.video-js button {
+  font-size: 3.5em !important;
+}
+
+.video-js .vjs-control {
+  width: 3em !important;
+}
+
+.video-js .vjs-progress-control {
+  margin-left: 8em !important;
+}
+
+.video-js .vjs-progress-holder {
+  height: 0.6em !important;
+}
+
+.video-js .vjs-time-control {
+  font-size: 3em !important;
+  margin-right: 1.2em !important;
+  margin-top: 0.2em !important;
+}
+
+.video-js .vjs-play-progress {
+  font-size: 2em !important;
+}
+
+/* video player */
+
 .video-player {
   width: 100%;
   height: 100vh;
@@ -72,9 +327,19 @@
   top: 3px;
 }
 
+.video-react-icon-volume-down:before, .video-react .video-react-bezel .video-react-bezel-icon-volume-down:before, .video-react .video-react-mute-control.video-react-vol-2:before, .video-react .video-react-volume-menu-button.video-react-vol-2:before, .video-react .video-react-mute-control.video-react-vol-1:before, .video-react .video-react-volume-menu-button.video-react-vol-1:before {
+  left: -5px;
+}
+  
+.video-react-icon-volume-mute:before, .video-react .video-react-mute-control.video-react-vol-0:before, .video-react .video-react-volume-menu-button.video-react-vol-0:before {
+  left: -10px;
+}
+
 .video-react .video-react-mute-control, .video-react .video-react-volume-menu-button {
   font-size: 3.5em;
   top: 3px;
+  display: block;
+  left: 2px;
 }
 
 .video-react .video-react-volume-bar.video-react-slider-vertical {
@@ -169,6 +434,10 @@
 
 .video-react-play-progress.video-react-slider-bar {
   font-size: 2em;
+}
+
+.video-react .video-react-progress-control:hover .video-react-play-progress:after {
+  visibility: hidden;
 }
 
 .video-react .video-react-play-progress:hover:before {

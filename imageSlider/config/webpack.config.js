@@ -146,8 +146,8 @@ module.exports = function(webpackEnv) {
       // There will be one main bundle, and one file per asynchronous chunk.
       // In development, it does not produce real files.
       filename: isEnvProduction
-        ? 'Javascript/main.js'
-        : isEnvDevelopment && 'js/bundle.js',
+        ? 'Javascript/imageSlider.js'
+        : isEnvDevelopment && 'js/imageSlider.js',
       // TODO: remove this when upgrading to webpack 5
       futureEmitAssets: true,
       // We inferred the "public path" (such as / or /my-project) from homepage.
@@ -489,7 +489,7 @@ module.exports = function(webpackEnv) {
         new MiniCssExtractPlugin({
           // Options similar to the same options in webpackOptions.output
           // both options are optional
-          filename: 'CSS/main.css',
+          filename: 'CSS/imageSlider.css',
         }),
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.

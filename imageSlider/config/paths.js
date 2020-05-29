@@ -69,7 +69,7 @@ const resolveModule = (resolveFn, filePath) => {
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
-  appBuild: resolveApp('../../CMS/Custom/ImageSlider'),
+  appBuild: resolveApp('./build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('index.html'),
   appIndexJs: resolveModule(resolveApp, 'src/index'),

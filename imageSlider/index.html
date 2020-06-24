@@ -4,231 +4,279 @@
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-
+    
     <title>Image Slider</title>
     <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+   
+    <div id="app"></div> 
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
     <script type="text/javascript">
     //  <![CDATA[
-    var __PAGE_DATA__ = {
-      "title": "Title"
-    }
-    var __IMAGE_DATA__ = [ 
+
+  var __ENVIRONMENT__ = {
+  "server": "DEV",
+  "nodeAlias": "early-auckland-2",
+  "cultureName": "English",
+  "cultureCode": "en-NZ"
+};
+
+var __GALLERY_DATA__ = {
+  "id": 28830,
+  "title": "Title",
+  "text": "",
+  "itemCount": 1,
+  "items": [
     {
-    "id": 0,
-    "image1": "https://www.aucklandmuseum.com/getmedia/10e15b33-47e1-4f71-bb04-4127421822cd/AlbertOld",
-    "title1": "Albert St ",
-    "date1": "circa 1865",
-    "caption1": "Image caption",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "www.aucklandmuseum.com",
-    "image2": "https://www.aucklandmuseum.com/getmedia/39d1da38-bf10-4eea-83c9-5b649e6d6cc4/AlbertNew",
-    "title2": "Albert St ",
-    "date2": "2019",
-    "caption2": "Image caption",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": "www.aucklandmuseum.com"
-  }, {
-    "id": 1,
-    "image1": "https://www.aucklandmuseum.com/getmedia/a4d70535-e3bd-4384-b1e6-b3be2c3ae230/CornerofQueenandFortold",
-    "title1": "Corner of Queen and Fort streets ",
-    "date1": "1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/5393cb61-2e30-4666-b3f6-e5a27b71c6f5/Cornerofqueenandfortnew",
-    "title2": "Corner of Queen and Fort streets ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 2,
-    "image1": "https://www.aucklandmuseum.com/getmedia/4bdef84a-8835-4830-a625-4a1abdc1d02c/GraftonOld",
-    "title1": "Grafton Rd looking towards the harbour ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/00432c04-686f-491d-8d37-95b6ad06b8a7/GraftonNew",
-    "title2": "Grafton Rd looking towards the harbour ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 3,
-    "image1": "https://www.aucklandmuseum.com/getmedia/37959aa9-474c-4429-a8c3-727bf7d112fe/GreyStOld",
-    "title1": "Grey St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/448fe2b1-78d7-4c78-8481-418e476c74a5/GreyStNew",
-    "title2": "Greys Ave and Aotea Sq ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 4,
-    "image1": "https://www.aucklandmuseum.com/getmedia/d819e502-0e97-4c7b-93a0-446175fdd848/HighStold",
-    "title1": "High St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/d56121b4-b353-4233-ac9c-3cbc8f3a4bcc/HighStNew",
-    "title2": "High St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 5,
-    "image1": "https://www.aucklandmuseum.com/getmedia/9710ffc9-4c58-4843-a303-6a2af51fd4e6/Karangahapeold",
-    "title1": "Karangahape Rd ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/505fe795-ba4c-4c2c-918f-4f0e6926e112/KarangahapeNew",
-    "title2": "Karangahape Rd ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 6,
-    "image1": "https://www.aucklandmuseum.com/getmedia/fc856142-0cdc-47cb-b0b4-316fc9bd8916/PittOld",
-    "title1": "Pitt St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/eaeecdbb-68f0-4ffe-bdb3-3ac1b42d3666/PittStNew",
-    "title2": "Pitt St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 7,
-    "image1": "https://www.aucklandmuseum.com/getmedia/15516dce-5008-46af-98e8-307d3b1463c3/QueenStcnrofcustomsold",
-    "title1": "Queen St from corner of Customs St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/429f8685-078e-4ff8-bd01-4f4e7eba50e8/QueenStcnrofcustomsnew",
-    "title2": "Queen St from corner of Customs St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 8,
-    "image1": "https://www.aucklandmuseum.com/getmedia/28e362ca-9578-47a9-bd94-3b5a48c32818/QueenStVulcanandDurhamOld",
-    "title1": "Queen St between Vulcan Lane and Durham St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/b2118e9f-3d8b-4295-aca4-ae976fe9f581/QueenStVulcanandDurhamNew",
-    "title2": "Queen St between Vulcan Lane and Durham St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 9,
-    "image1": "https://www.aucklandmuseum.com/getmedia/90745866-8f4d-4b7c-ae3e-2b709bd509bb/ShortlandQeenOld",
-    "title1": "Shortland St looking down to Queen St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/f16de480-ab2b-4c42-968e-7b4a754ae68b/ShortlandQueenNew",
-    "title2": "Shortland St looking down to Queen St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 10,
-    "image1": "https://www.aucklandmuseum.com/getmedia/5be9f5f8-eae1-4605-ae7d-2285fe0c1afd/SwansonQueenOld",
-    "title1": "Swanson St from Queen St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/fe0615f5-a814-4160-bd4f-747f156931d9/SwansonQueenNew",
-    "title2": "Swanson St from Queen St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 11,
-    "image1": "https://www.aucklandmuseum.com/getmedia/c713ff15-e6b6-4a75-a8b0-d813f02ad9bf/SymondsOld",
-    "title1": "Symonds St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/f70ed7c7-6f99-4cad-879b-93d823ee08aa/SymondsNew",
-    "title2": "Symonds St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 12,
-    "image1": "https://www.aucklandmuseum.com/getmedia/3fceb549-cb9c-43a5-940e-546aca8b6ad7/VictoriaandHonsonOld",
-    "title1": "Corner of Victoria and Hobson streets ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/f5efdb0c-3890-4739-902a-537dea03a117/VictoriaandHobsonNewg",
-    "title2": "Corner of Victoria and Hobson streets ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 13,
-    "image1": "https://www.aucklandmuseum.com/getmedia/a70e0d98-54e9-4b05-b66a-f96d2b33d857/VictoriaStOld",
-    "title1": "Victoria St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/2d1a1cb7-b0a7-4609-a0aa-0f11659df208/VictoriaStNew",
-    "title2": "Victoria St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }, {
-    "id": 14,
-    "image1": "https://www.aucklandmuseum.com/getmedia/e7afed6b-1c88-44a0-89ba-07430b41420f/WyndhamQueenStOld",
-    "title1": "Wyndham St from Queen St ",
-    "date1": "circa 1865",
-    "caption1": "",
-    "credit1": "Reproduction from abumen silver print",
-    "link1": "",
-    "image2": "https://www.aucklandmuseum.com/getmedia/3eb6dec4-d3f5-4dcb-8ea8-16585e356453/WyndhamStQueenNew",
-    "title2": "Wyndham St from Queen St ",
-    "date2": "2019",
-    "caption2": "",
-    "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
-    "link2": ""
-  }
-]
+      "id": 0,
+      "image1": {
+        "id": 28833,
+        "order": 1,
+        "cultureName": "English",
+        "cultureCode": "en-NZ",
+        "nodealias": "AlbertSt-Old",
+        "classname": "akm.image",
+        "title": "Albert St",
+        "text": "circa 1865",
+        "caption": "Image caption",
+        "credit": "Reproduction from abumen silver print",
+        "source": "source",
+        "copyright": "copy right",
+        "original": "https://www.aucklandmuseum.com/getmedia/10e15b33-47e1-4f71-bb04-4127421822cd/AlbertOld"
+      },
+      "image2": {
+        "id": 28834,
+        "order": 1,
+        "cultureName": "English",
+        "cultureCode": "en-NZ",
+        "nodealias": "AlbertSt-New",
+        "classname": "akm.image",
+        "title": "Albert St New",
+        "text": "2019",
+        "caption": "Image caption",
+        "credit": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+        "source": "source",
+        "copyright": "copy right",
+        "original": "https://www.aucklandmuseum.com/getmedia/39d1da38-bf10-4eea-83c9-5b649e6d6cc4/AlbertNew"
+      }
+    }
+  ]
+}
+//     var __IMAGE_DATA__ = [ 
+//     {
+//     "id": 0,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/10e15b33-47e1-4f71-bb04-4127421822cd/AlbertOld",
+//     "title1": "Albert St ",
+//     "date1": "circa 1865",
+//     "caption1": "Image caption",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "www.aucklandmuseum.com",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/39d1da38-bf10-4eea-83c9-5b649e6d6cc4/AlbertNew",
+//     "title2": "Albert St ",
+//     "date2": "2019",
+//     "caption2": "Image caption",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": "www.aucklandmuseum.com"
+//   }, {
+//     "id": 1,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/a4d70535-e3bd-4384-b1e6-b3be2c3ae230/CornerofQueenandFortold",
+//     "title1": "Corner of Queen and Fort streets ",
+//     "date1": "1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/5393cb61-2e30-4666-b3f6-e5a27b71c6f5/Cornerofqueenandfortnew",
+//     "title2": "Corner of Queen and Fort streets ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 2,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/4bdef84a-8835-4830-a625-4a1abdc1d02c/GraftonOld",
+//     "title1": "Grafton Rd looking towards the harbour ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/00432c04-686f-491d-8d37-95b6ad06b8a7/GraftonNew",
+//     "title2": "Grafton Rd looking towards the harbour ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 3,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/37959aa9-474c-4429-a8c3-727bf7d112fe/GreyStOld",
+//     "title1": "Grey St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/448fe2b1-78d7-4c78-8481-418e476c74a5/GreyStNew",
+//     "title2": "Greys Ave and Aotea Sq ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 4,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/d819e502-0e97-4c7b-93a0-446175fdd848/HighStold",
+//     "title1": "High St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/d56121b4-b353-4233-ac9c-3cbc8f3a4bcc/HighStNew",
+//     "title2": "High St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 5,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/9710ffc9-4c58-4843-a303-6a2af51fd4e6/Karangahapeold",
+//     "title1": "Karangahape Rd ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/505fe795-ba4c-4c2c-918f-4f0e6926e112/KarangahapeNew",
+//     "title2": "Karangahape Rd ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 6,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/fc856142-0cdc-47cb-b0b4-316fc9bd8916/PittOld",
+//     "title1": "Pitt St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/eaeecdbb-68f0-4ffe-bdb3-3ac1b42d3666/PittStNew",
+//     "title2": "Pitt St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 7,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/15516dce-5008-46af-98e8-307d3b1463c3/QueenStcnrofcustomsold",
+//     "title1": "Queen St from corner of Customs St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/429f8685-078e-4ff8-bd01-4f4e7eba50e8/QueenStcnrofcustomsnew",
+//     "title2": "Queen St from corner of Customs St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 8,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/28e362ca-9578-47a9-bd94-3b5a48c32818/QueenStVulcanandDurhamOld",
+//     "title1": "Queen St between Vulcan Lane and Durham St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/b2118e9f-3d8b-4295-aca4-ae976fe9f581/QueenStVulcanandDurhamNew",
+//     "title2": "Queen St between Vulcan Lane and Durham St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 9,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/90745866-8f4d-4b7c-ae3e-2b709bd509bb/ShortlandQeenOld",
+//     "title1": "Shortland St looking down to Queen St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/f16de480-ab2b-4c42-968e-7b4a754ae68b/ShortlandQueenNew",
+//     "title2": "Shortland St looking down to Queen St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 10,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/5be9f5f8-eae1-4605-ae7d-2285fe0c1afd/SwansonQueenOld",
+//     "title1": "Swanson St from Queen St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/fe0615f5-a814-4160-bd4f-747f156931d9/SwansonQueenNew",
+//     "title2": "Swanson St from Queen St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 11,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/c713ff15-e6b6-4a75-a8b0-d813f02ad9bf/SymondsOld",
+//     "title1": "Symonds St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/f70ed7c7-6f99-4cad-879b-93d823ee08aa/SymondsNew",
+//     "title2": "Symonds St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 12,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/3fceb549-cb9c-43a5-940e-546aca8b6ad7/VictoriaandHonsonOld",
+//     "title1": "Corner of Victoria and Hobson streets ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/f5efdb0c-3890-4739-902a-537dea03a117/VictoriaandHobsonNewg",
+//     "title2": "Corner of Victoria and Hobson streets ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 13,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/a70e0d98-54e9-4b05-b66a-f96d2b33d857/VictoriaStOld",
+//     "title1": "Victoria St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/2d1a1cb7-b0a7-4609-a0aa-0f11659df208/VictoriaStNew",
+//     "title2": "Victoria St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }, {
+//     "id": 14,
+//     "image1": "https://www.aucklandmuseum.com/getmedia/e7afed6b-1c88-44a0-89ba-07430b41420f/WyndhamQueenStOld",
+//     "title1": "Wyndham St from Queen St ",
+//     "date1": "circa 1865",
+//     "caption1": "",
+//     "credit1": "Reproduction from abumen silver print",
+//     "link1": "",
+//     "image2": "https://www.aucklandmuseum.com/getmedia/3eb6dec4-d3f5-4dcb-8ea8-16585e356453/WyndhamStQueenNew",
+//     "title2": "Wyndham St from Queen St ",
+//     "date2": "2019",
+//     "caption2": "",
+//     "credit2": "By Andrew Pettengell. Inkjet on Iford Galeria Metallic.",
+//     "link2": ""
+//   }
+// ]
      //]]>
     </script>
   </body>

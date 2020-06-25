@@ -97,13 +97,13 @@
   margin: 5% auto auto auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   #image-slider .text-grid {
     grid-column-gap: 5%;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1023px) {
   #image-slider .text-grid {
     margin: 10% auto auto auto;
     display: block;
@@ -113,11 +113,6 @@
   }
 }
 
-#image-slider .col1 {
-  grid-row: 1;
-  grid-column: 1;
-  margin: auto;
-}
 
 #image-slider .image-title {
   font-weight: 900;
@@ -126,25 +121,24 @@
   font-size: 5rem;
 }
 
-@media (max-width: 1150px) {
-  #image-slider .image-title {
-    font-size: 4.5rem;
-  }
-}
-
-
-@media (max-width: 1024px) {
-  #image-slider .image-title {
-    float: none;
-    font-size: 4.5rem;
-  }
-}
-
-@media (max-width: 450px) {
+@media (max-width: 1200px) {
   #image-slider .image-title {
     font-size: 4rem;
   }
 }
+
+@media (max-width: 1023px) {
+  #image-slider .image-title {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  #image-slider .image-title {
+    float: none;
+  }
+}
+
 
 #image-slider .date {
   margin-bottom: 10px;
@@ -154,23 +148,28 @@
   font-size: 5rem;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   #image-slider .date {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #image-slider .date {
     float: none;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #image-slider .date {
-    font-size: 4rem;
     margin-left: 0px;
   }
+}
+
+#image-slider .col1 {
+  grid-row: 1;
+  grid-column: 1;
+  margin: auto;
 }
 
 #image-slider .caption1 {
@@ -212,7 +211,7 @@
   margin: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1200px) {
   #image-slider .col2 {
     float: none;
   }

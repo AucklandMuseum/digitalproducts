@@ -7,7 +7,17 @@
   text-align: center;
 }
 
+@media (max-width: 414px) {
+ #image-slider .slick-prev {
+  left: -34px;
+ }
+}
 
+@media (max-width: 380px) and (min-width: 375px) {
+ #image-slider .slick-prev {
+   left: -31px;
+  }
+}  
 
 #image-slider .slick-slider div {
   cursor: defualt !important;

@@ -11,6 +11,10 @@ class App extends React.Component {
         imageId: 0
     }
   }
+
+  componentDidMount() {
+    console.log(document.getElementsByTagName('img'))
+  }
   
   afterChangeHandler = (e) => {
     this.setState({imageId: e})
@@ -40,7 +44,7 @@ const currentImageText = imageData.items.find(image => image.id === this.state.i
      <Slider {...settings}>
       {imageData.items.map((img) => {
         return <div>
-         <ReactCompareImage id={img.id} leftImage={img.image1.original} rightImage={img.image2.original} sliderLineColor='rgba(255, 255, 255, 0.6)' sliderLineWidth={3} style={{boxShadow: 'none'}} handle={<img src="https://www.aucklandmuseum.com/getmedia/9f57c5a4-b04c-41bf-920e-f65e48671020/arrows" alt="arrows" style={{width: 30, height: 15, opacity: 0.65}}/>}/>
+         <ReactCompareImage id={'slider' + img.id} leftImage={img.image1.original} rightImage={img.image2.original} sliderLineColor='rgba(255, 255, 255, 0.6)' sliderLineWidth={3} style={{boxShadow: 'none'}} handle={<img src="https://www.aucklandmuseum.com/getmedia/9f57c5a4-b04c-41bf-920e-f65e48671020/arrows" alt="arrows" style={{width: 30, height: 15, opacity: 0.65}}/>}/>
          </div>
       }
      )}
